@@ -66,3 +66,8 @@ main form {
   color: white;
   font-size: 50px;
 }
+
+#radios {
+  display: flex;
+  flex-direction: column;
+}

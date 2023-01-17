@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
   <header class="header">
     <img src="images/trybewarts-header-logo.svg" alt="" class="trybewarts-header-logo">
     <h1 id="trybewarts-header-title">Trybewarts</h1>
     <form action="" class="trybewarts-login">
-        <input id="email-login" type="text" name="email" placeholder="Email">
-        <input id="senha-login" type="password" name="password" placeholder="Senha">
-        <button id="login">Entrar</button>
+      <input id="email-login" type="text" name="email" placeholder="Email">
+      <input id="senha-login" type="password" name="password" placeholder="Senha">
+      <button id="login">Entrar</button>
     </form>
   </header>
   <main>
@@ -32,9 +34,22 @@
           <option value="Pytherina" id="pytherina-house">Pytherina</option>
         </select>
       </div>
+      <div id="radios">
+        <label id="label-family">Qual sua família?</label>
+        <label for="1">Frontend
+          <input type="radio" name="family" value="Frontend" id="1">
+        </label>
+        <label for="2">Backend
+          <input type="radio" name="family" value="Backend" id="2">
+        </label>
+        <label for="3">Fullstack
+          <input type="radio" name="family" value="Fullstack" id="3">
+        </label>
+      </div>
     </form>
     <img src="images/trybewarts-colored.svg" alt="" id="trybewarts-forms-logo">
   </main>
   <script src="./script.js"></script>
 </body>
+
 </html>
