@@ -67,6 +67,10 @@ main form {
   font-size: 50px;
 }
 
+#label-content {
+  flex-direction: column;
+}
+
 #radios {
   display: flex;
   flex-direction: column;
