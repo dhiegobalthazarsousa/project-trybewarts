@@ -76,7 +76,7 @@ main form {
   flex-direction: column;
 }
 
-#comentario {
+.comentario {
   display: flex;
   flex-direction: column;
 }
