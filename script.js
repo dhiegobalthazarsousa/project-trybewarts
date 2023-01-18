@@ -17,9 +17,9 @@ const inputName = document.querySelector('#input-name');
 const inputLastName = document.querySelector('#input-lastname');
 const inputEmail = document.querySelector('#input-email');
 const inputCasa = document.querySelector('#house');
-const inputFamilia = document.querySelector('input[name="family"]:checked');
+const inputFamilia = document.querySelectorAll('input[name="family"]:checked');
 const inputMateria = document.querySelectorAll('input[name="materia"]:checked');
-const inputAvaliacao = document.querySelector('input[name="rate"]:checked');
+const inputAvaliacao = document.querySelectorAll('input[name="rate"]:checked');
 const inputObservacao = document.querySelector('#textarea');
 
 const validateForm = (event) => {
@@ -55,16 +55,18 @@ const counterCharacterInTextArea = () => {
 
 const submitValues = (event) => {
   event.preventDefault();
+  const evaluationForm = documento.querySelector('#evaluation-form');
+  evaluationForm.innerHtml = '';
   nome.innerText = `Nome: ${inputName.value} ${inputLastName.value}`;
   email.innerText = `Email: ${inputEmail.value}`;
   casa.innerText = `Casa: ${inputCasa.value}`;
-  familia.innerText = `Família: ${inputFamilia}`;
+  familia.innerText = `Família: ${inputFamilia.value}`;
   let stringMaterias = '';
   for (let index = 0; index < inputMateria.length; index += 1) {
     stringMaterias += inputMateria[index].value;
   }
   materias.innerText = `Matérias: ${stringMaterias}`;
-  avaliacao.innerText = `Avaliação: ${inputAvaliacao}`;
+  avaliacao.innerText = `Avaliação: ${inputAvaliacao.value}`;
   observacao.innerText = `Observações: -${inputObservacao.value}-`;
 };
 
