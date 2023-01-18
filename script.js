@@ -5,22 +5,12 @@ const botaoEnviar = document.querySelector('#submit-btn');
 const checkbox = document.querySelector('#agreement');
 const textArea = document.querySelector('.comentario');
 const characterCounter = document.querySelector('#counter');
-
-const nome = document.querySelector('#nome');
-const email = document.querySelector('#email');
-const casa = document.querySelector('#casa');
-const familia = document.querySelector('#familia');
-const materias = document.querySelector('#materias');
-const avaliacao = document.querySelector('#avaliacao');
-const observacao = document.querySelector('#observacao');
+const inputEmail = document.querySelector('#input-email');
+const formData = document.querySelector('#form-data');
+const fullForm = document.querySelector('#evaluation-form');
 const inputName = document.querySelector('#input-name');
 const inputLastName = document.querySelector('#input-lastname');
-const inputEmail = document.querySelector('#input-email');
 const inputCasa = document.querySelector('#house');
-const inputFamilia = document.querySelector('input[name="family"]:checked');
-const inputMateria = document.querySelectorAll('input[name="materia"]:checked');
-const inputAvaliacao = document.querySelector('input[name="rate"]:checked');
-const inputObservacao = document.querySelector('#textarea');
 
 const validateForm = (event) => {
   event.preventDefault();
@@ -32,6 +22,16 @@ const validateForm = (event) => {
     alert('Email ou senha inválidos.');
   }
 };
+
+const materiaForm = () => {
+  const arr = [];
+  const inputMateria = document.querySelectorAll('input[type="checkbox"][name="materia"]:checked')
+  for (let index = 0; index < inputMateria.length; index += 1) {
+    arr.push(inputMateria[index].value)
+  }
+  return arr.join(', ');
+}
+
 
 const buttonOn = () => {
   botaoEnviar.disabled = false;
@@ -53,19 +53,23 @@ const counterCharacterInTextArea = () => {
   characterCounter.innerText = 500 - textArea.value.length;
 };
 
-const submitValues = (event) => {
+function submitValues(event) {
+  const inputFamilia = document.querySelector('input[name="family"]:checked').value;
+  const inputAvaliacao = document.querySelector('input[type="radio"][name="rate"]:checked').value;
+  const materias = materiaForm();
+  const inputObservacao = document.querySelector('#textarea');
   event.preventDefault();
-  nome.innerText = `Nome: ${inputName.value} ${inputLastName.value}`;
-  email.innerText = `Email: ${inputEmail.value}`;
-  casa.innerText = `Casa: ${inputCasa.value}`;
-  familia.innerText = `Família: ${inputFamilia}`;
-  let stringMaterias = '';
-  for (let index = 0; index < inputMateria.length; index += 1) {
-    stringMaterias += inputMateria[index].value;
-  }
-  materias.innerText = `Matérias: ${stringMaterias}`;
-  avaliacao.innerText = `Avaliação: ${inputAvaliacao}`;
-  observacao.innerText = `Observações: -${inputObservacao.value}-`;
+  formData.style.display = 'flex';
+  formData.style.flexDirection = 'column';
+  formData.innerHTML = `
+  <p>Nome: ${inputName.value} ${inputLastName.value}</p>
+  <p>Email: ${inputEmail.value}</p>
+  <p>Casa: ${inputCasa.value}</p>
+  <p>Família: ${inputFamilia}</p>
+  <p>Matérias: ${materias}</p>
+  <p>Avaliação: ${inputAvaliacao}</p>
+  <p>Observações: ${inputObservacao.value}</p>`;
+  fullForm.style.display = 'none';
 };
 
 const callListeners = () => {
