@@ -2,24 +2,55 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 main {
   display: flex;
+  justify-content: space-around;
 }
 
-main form {
-  display: flex;
+#form-container {
+  box-shadow: 0px 0px 8px rgb(171, 167, 167);
+  border-radius: 3%;
   width: 675px;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#form-container input[type=text], input[type=email], input[type=textarea]{
+  height: 20px;
+  padding: 0 25px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 4px rgb(171, 167, 167);
+  margin-right: 4px;
+}
+
+
+
+.radio {
+  width: 30px;
+  border: none;
+  background-color: blue;
+  color: green;
 }
 
 #nome-sobrenome {
+  margin-bottom: 15px;
   display: flex;
+  justify-content: center;
 }
+
+
 
 #email-e-casa {
   display: flex;
+  justify-content: center;
 }
 
 #trybewarts-forms-logo {
@@ -74,11 +105,52 @@ main form {
 #radios {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#avaliacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#div-comentario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#opcoes{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#opcoes span {
+  margin-left: 5px;
+}
+
+#div-confirmacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comentario {
   display: flex;
   flex-direction: column;
+}
+
+#checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-checks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 footer {
