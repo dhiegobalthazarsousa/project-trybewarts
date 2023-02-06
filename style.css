@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+#form-container {
+  box-shadow: 0px 0px 8px rgb(171, 167, 167);
+  border-radius: 3%;
+  width: 675px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#form-container input[type=text], input[type=email], input[type=textarea]{
+  height: 20px;
+  padding: 0 25px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 4px rgb(171, 167, 167);
+  margin-right: 4px;
+}
+
+
+
+.radio {
+  width: 30px;
+  border: none;
+  background-color: blue;
+  color: green;
+}
+
+#nome-sobrenome {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+#email-e-casa {
+  display: flex;
+  justify-content: center;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 80px;
+  background-color: rgb(50, 167, 145);
+}
+
+.trybewarts-header-logo {
+  width: 120px;
+  height: 80px;
+}
+
+.trybewarts-login {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.trybewarts-login input {
+  height: 35px;
+  padding: 0 25px;
+  border-radius: 10px;
+  border: none;
+}
+
+#login {
+  height: 35px;
+  padding: 0 30px;
+  background: rgb(255, 137, 3);
+  border-radius: 10px;
+  border: none;
+}
+
+#trybewarts-header-title {
+  align-self: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: white;
+  font-size: 50px;
+}
+
+#label-content {
+  flex-direction: column;
+}
+
+#radios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#avaliacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#div-comentario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#opcoes{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#opcoes span {
+  margin-left: 5px;
+}
+
+#div-confirmacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comentario {
+  display: flex;
+  flex-direction: column;
+}
+
+#checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-checks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+}
+
+#user-info {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+#user-info p {
+  line-height: 40px;
+}
